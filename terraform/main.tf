@@ -8,9 +8,6 @@ resource "aws_instance" "My-Webserver" {
 	 Name = "My-Webserver-${count.index}"
  }
  key_name = "ubuntu_login"
-# user_data = "$file(installNginx.sh})"
-
-
 user_data = <<-EOF
 	#!/bin/bash
          /usr/bin/apt-get update
